@@ -1,0 +1,99 @@
+// Variables 
+
+// Device Breakpoints
+$mobile: 375px;
+$desktop: 1440px;
+
+// Colours
+
+// --Primary
+$tomato: hsl(4, 100%, 67%); // Tomato
+
+// --Neutral
+$dark-grey: hsl(234, 29%, 20%); // Dark Slate Grey
+$charcoal-grey: hsl(235, 18%, 26%); // Charcoal Grey
+$plain-grey: hsl(231, 7%, 60%); // Grey
+$white: hsl(0, 0%, 100%); // White
+
+// Typography
+
+// --Body Copy
+$body: 16px;
+
+// End Variables
+
+// Global Styles
+
+body {
+    background: $dark-grey;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif !important;
+    .newsletter {
+        background: $white;
+        padding: 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        line-height: 2.5;
+        border-radius: 25px;
+        &__signup {
+            max-width: 436px;
+            padding: 2.5rem;
+            h1 {
+                line-height: 1;
+                color: $charcoal-grey;
+                font-size: 3.5rem;
+                font-weight: 700;
+            }
+            &__headline {
+                padding: 20px 0;
+                line-height: 1.5;
+            }
+            ul {
+                li {
+                    display: flex;
+                    p {
+                        line-height: 2;
+                        margin-left: 1rem;
+                    }
+                }
+            }
+            &__form {
+                &__header {
+                    h3 {
+                        padding-top: 20px;
+                        font-weight: 700;
+                        font-size: .85rem;
+                        color: $dark-grey;
+                    }
+                    p {
+                        display: none;
+                    }
+                }
+                input {
+                    border: 1px solid $plain-grey;
+                    width: 100%;
+                    padding: 1rem;
+                    border-radius: 10px;
+                    font-size: 1rem;
+                }
+                button {
+                    width: 100%;
+                    padding: 1rem;
+                    margin-top: 1.25rem;
+                    background: $dark-grey;
+                    font-weight: 700;
+                    color: $white;
+                    font-size: 1rem;
+                    border-radius: 10px;
+                    border: none;
+                }
+            }
+        }
+    }
+}
