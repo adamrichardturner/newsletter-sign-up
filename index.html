@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="icon"
       type="image/png"
@@ -26,7 +26,7 @@
       <div class="newsletter__signup">
         <h1>Stay updated!</h1>
         <p class="newsletter__signup__headline">
-          Join 60,000+ product managers receiving monthly<br />
+          Join 60,000+ product managers receiving monthly<br class="hiddenMobile" />
           updates on:
         </p>
         <ul>
@@ -43,29 +43,31 @@
             <p>And much more!</p>
           </li>
         </ul>
-        <form class="newsletter__signup__form">
+        <form class="newsletter__signup__form" novalidate>
           <div class="newsletter__signup__form__header">
             <h3>Email address</h3>
-            <p>Valid email required</p>
           </div>
-          <input
-            type="email"
-            id="email-input"
-            placeholder="email@company.com"
-            required
-          />
+          <div>
+            <div id="emailError" style="font-size: 12px; color: tomato; text-align: right; height: 1.5em; margin-bottom: 5px;"></div>
+            <input
+              type="email"
+              id="email-input"
+              placeholder="email@company.com"
+              required
+            />
+          </div>
           <button type="submit">Subscribe to monthly newsletter</button>
         </form>
       </div>
       <div class="newsletter__image">
         <picture>
           <source
-            media="(max-width: 375px)"
+            media="(max-width: 991px)"
             srcset="assets/images/illustration-sign-up-mobile.svg"
             type="image/svg+xml"
           />
           <source
-            media="(min-width: 376px)"
+            media="(min-width: 992px)"
             srcset="assets/images/illustration-sign-up-desktop.svg"
             type="image/svg+xml"
           />
@@ -84,6 +86,9 @@
         A confirmation email has been sent to ash@loremcompany.com. Please open
         it and click the button inside to confirm your subscription.
       </p>
+      <button type="submit">Dismiss message</button>
     </section>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>

@@ -6,6 +6,12 @@ body {
   justify-content: center;
   flex-direction: column;
   font-family: "Roboto", sans-serif !important;
+  padding: 1rem;
+}
+@media (max-width: 991px) {
+  body {
+    padding: 0;
+  }
 }
 body .newsletter {
   background: hsl(0, 0%, 100%);
@@ -17,15 +23,32 @@ body .newsletter {
   line-height: 2.5;
   border-radius: 25px;
 }
+@media (max-width: 991px) {
+  body .newsletter {
+    flex-direction: column-reverse;
+    max-width: 375px;
+    padding: 0 2rem 2rem 2rem;
+  }
+}
 body .newsletter__signup {
   max-width: 436px;
-  padding: 2.5rem;
+  padding: 2.5rem 3.25rem 2.5rem 1.75rem;
+}
+@media (max-width: 991px) {
+  body .newsletter__signup {
+    padding: 1.25rem 0 0 0;
+  }
 }
 body .newsletter__signup h1 {
   line-height: 1;
   color: hsl(235, 18%, 26%);
   font-size: 3.5rem;
   font-weight: 700;
+}
+@media (max-width: 991px) {
+  body .newsletter__signup h1 {
+    font-size: 2rem;
+  }
 }
 body .newsletter__signup__headline {
   padding: 20px 0;
@@ -34,14 +57,31 @@ body .newsletter__signup__headline {
 body .newsletter__signup ul li {
   display: flex;
 }
+@media (max-width: 991px) {
+  body .newsletter__signup ul li {
+    align-items: flex-start;
+    padding-bottom: 1rem;
+  }
+  body .newsletter__signup ul li:last-child {
+    padding-bottom: 0; /* Remove padding for the last item */
+  }
+}
 body .newsletter__signup ul li p {
   line-height: 2;
   margin-left: 1rem;
 }
+@media (max-width: 991px) {
+  body .newsletter__signup ul li p {
+    line-height: 1.25;
+  }
+}
+body .newsletter__signup__form__header {
+  position: relative;
+  bottom: -25px;
+}
 body .newsletter__signup__form__header h3 {
-  padding-top: 20px;
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 12px;
   color: hsl(234, 29%, 20%);
 }
 body .newsletter__signup__form__header p {
@@ -54,6 +94,10 @@ body .newsletter__signup__form input {
   border-radius: 10px;
   font-size: 1rem;
 }
+body .newsletter__signup__form input:focus, body .newsletter__signup__form input:active {
+  outline: none;
+  border: 1px solid hsl(234, 29%, 20%);
+}
 body .newsletter__signup__form button {
   width: 100%;
   padding: 1rem;
@@ -64,4 +108,66 @@ body .newsletter__signup__form button {
   font-size: 1rem;
   border-radius: 10px;
   border: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+body .newsletter__signup__form button:hover {
+  background: linear-gradient(to left, hsl(4, 100%, 67%), rgb(255, 84, 116));
+  box-shadow: 0 4px 8px 1px hsl(4, 100%, 67%);
+  outline: 1px solid hsl(4, 100%, 67%);
+  cursor: pointer;
+}
+body .success {
+  background: hsl(0, 0%, 100%);
+  max-width: 420px;
+  padding: 2rem;
+}
+body .success img {
+  max-width: 40px;
+  padding-bottom: 2rem;
+}
+body .success h2 {
+  line-height: 1;
+  color: hsl(235, 18%, 26%);
+  font-size: 2.75rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+}
+@media (max-width: 991px) {
+  body .success h2 {
+    font-size: 2rem;
+  }
+}
+body .success p {
+  font-size: 1rem;
+  padding-bottom: 1.75rem;
+  line-height: 1.25;
+}
+body .success button {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.25rem;
+  background: hsl(234, 29%, 20%);
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+body .success button:hover {
+  background: linear-gradient(to left, hsl(4, 100%, 67%), rgb(255, 84, 116));
+  box-shadow: 0 4px 8px 1px hsl(4, 100%, 67%);
+  outline: 1px solid hsl(4, 100%, 67%);
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .hiddenMobile {
+    display: none;
+  }
+}
+#emailError {
+  position: relative;
+  top: -5px;
+  right: 0;
 }/*# sourceMappingURL=style.css.map */
