@@ -28,6 +28,7 @@ Users should be able to:
 
 ### Built with
 
+- Vanilla JavaScript
 - Semantic HTML5 markup
 - Sass
 - Flexbox
