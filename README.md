@@ -20,7 +20,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](screenshotww.png)
+![](screenshot.png)
 
 ### Preview
 
